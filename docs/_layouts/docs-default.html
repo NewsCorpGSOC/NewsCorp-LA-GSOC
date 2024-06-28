@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/docs/assets/css/docs-style.css" | relative_url }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ site.logo | relative_url }}" alt="Site Logo">
+        <ul class="nav-menu">
+            <li><a href="{{ "/" | relative_url }}">Home</a></li>
+            <li><a href="{{ "/docs/" | relative_url }}">Docs Home</a></li>
+            <li><a href="{{ "/links" | relative_url }}">Links</a></li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <!-- Sidebar content for docs -->
+    </div>
+    <div class="content">
+        {{ content }}
+    </div>
+    <footer>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>
