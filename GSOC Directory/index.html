@@ -1,1 +1,103 @@
-#HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Site</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            max-height: 50px;
+            margin-right: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .nav-menu a {
+            color: #00D6E3;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .nav-menu a:hover {
+            color: #ECEFF4;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+        }
+
+        .nav-menu li:hover .dropdown-content {
+            display: block;
+        }
+
+        .sidebar {
+            width: 15%;
+            background-color: black;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 60px;
+        }
+
+        .content {
+            margin-left: 15%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="placeholder-image.jpg" alt="Placeholder Image">
+        <ul class="nav-menu">
+            <li><a href="home-url">Home</a></li>
+            <li>
+                <a href="#">Tools</a>
+                <div class="dropdown-content">
+                    <a href="phone-log-url">Phone Log</a>
+                    <a href="daily-high-risk-sheet-url">Daily High Risk Sheet</a>
+                    <a href="gpms-url">GPMS</a>
+                </div>
+            </li>
+            <li><a href="links-url">Links</a></li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <!-- Sidebar content can go here -->
+    </div>
+    <div class="content">
+        <!-- Main content can go here -->
+    </div>
+</body>
+</html>
