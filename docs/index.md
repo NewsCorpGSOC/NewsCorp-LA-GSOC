@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="NewsCorpLogo-Black.png" alt="Site Logo" width="500" height="300">
+        <img src="NewsCorpLogo-Black.png" alt="Site Logo">
         <ul class="nav-menu">
             <li><a href="{{ "/" | relative_url }}">Home</a></li>
             <li>
