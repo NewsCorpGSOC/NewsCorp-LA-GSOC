@@ -1,0 +1,13 @@
+title: News Corp LA GSOC
+description: >- # this means to ignore newlines until "baseurl:"
+  The Intranet portal for the L.A. GSOC
+baseurl: "/GSOC Directory" # the subpath of your site, e.g. /blog
+url: "https://newscorpgsoc.github.io/" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Other settings
+sass:
+  style: compressed
