@@ -1,7 +1,2202 @@
----
-layout: default
-title: Home
----
 
-<h1>Welcome to My Site</h1>
-<p>This is the home page.</p>
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Dow Jones - About Us</title>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-square70x70logo" content="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/mstile-70x70.png">
+    <meta name="msapplication-square144x144logo" content="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/mstile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/mstile-310x310.png">
+
+    <link rel="manifest" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/manifest.json">
+    <link rel="shortcut icon" href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/favicon.ico" type="image/x-icon" />
+
+    <!--[if IE 9]>
+        <link href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/css/ie9.css" rel="stylesheet" media="all" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <link href="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/css/ie8.css" rel="stylesheet" media="all" />
+        <script src="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/html5shiv.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+		function getParameterByName(name) {
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regexS = "[\\?&]" + name + "=([^&#]*)";
+			var regex = new RegExp(regexS);
+			var results = regex.exec(window.location.href);
+			if (results == null) return "";
+			else
+				return decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+		var qs_link= getParameterByName("link");
+	</script>
+    
+    <script>
+    var aceConfig = {"consumerApplication":"dowjones-prod"}
+    </script>
+  
+    <script>
+    (function() {
+      window.ace = window.ace || {};
+      function globalMessagingService() {
+  var subscriptionsMap = {};
+  var executionQueueMap = {};
+
+  var gmsMethods = {
+    addToExecutionQueue(key) {
+      if (!executionQueueMap[key]) {
+        executionQueueMap[key] = [];
+      }
+
+      executionQueueMap[key].push(arguments);
+
+      return executionQueueMap;
+    },
+
+    getSubscribedElements() {
+      return Object.keys(subscriptionsMap);
+    },
+
+    getSubscribedFunctions(key) {
+      return Object.keys(subscriptionsMap[key] || {});
+    },
+
+    executeQueue(key) {
+      try {
+        if (executionQueueMap[key]) {
+          executionQueueMap[key].forEach(params => this.execute(...params));
+        }
+
+        delete executionQueueMap[key];
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    execute() {
+      var [key, prop, param3, param4] = arguments;
+      var message = subscriptionsMap[key][prop];
+      var cb = r => r;
+      var args = [];
+
+      if (typeof message !== 'function') {
+        return message;
+      }
+
+      if (param3) {
+        if (typeof param3 === 'function') {
+          cb = param3;
+
+          if (param4 && Array.isArray(param4)) {
+            args = param4;
+          }
+        } else if (Array.isArray(param3)) {
+          args = param3;
+        }
+      }
+
+      return cb(message.apply(null, args));
+    },
+
+    __reset() {
+      var clean = obj => Object.keys(obj).forEach(key => delete obj[key]);
+
+      clean(subscriptionsMap);
+      clean(executionQueueMap);
+    },
+
+    hasSubscription(key) {
+      return this.getSubscribedElements().indexOf(key) > -1;
+    },
+
+    hasSubscribedFunction(key, functionName) {
+      return this.getSubscribedFunctions(key).indexOf(functionName) > -1;
+    },
+
+    uniqueFucntionsUnderSubscription(key, script) {
+      const { __ace = () => ({}) } = window;
+      let uniqueFunctions = {};
+
+      Object.keys(script).forEach(funcName => {
+        if (subscriptionsMap[key][funcName]) {
+          __ace('log', 'log', [{
+            type: 'warning',
+            initiator: 'page',
+            message: 'You are trying to subscribe the function ' + funcName + ' under the ' + key + ' namespace again. Use another name.'
+          }]);
+        } else {
+          uniqueFunctions[funcName] = script[funcName];
+        }
+      });
+
+      return uniqueFunctions;
+    },
+
+    addSubscription(key, script) {
+      if (this.hasSubscription(key)) {
+        const uniqueFunctions = this.uniqueFucntionsUnderSubscription(key, script);
+        subscriptionsMap[key] = { ...subscriptionsMap[key], ...uniqueFunctions };
+      } else {
+        subscriptionsMap[key] = script;
+      }
+
+      return subscriptionsMap;
+    },
+
+    subscribe(key, script, force) {  
+      if (force) {
+        subscriptionsMap[key] = script;
+
+        return subscriptionsMap;
+      }
+      if (script && typeof script === 'object') {
+        this.addSubscription(key, script);
+        this.executeQueue(key);
+      } else {
+        throw new Error('Missing third parameter. You must provide an object.');
+      }
+
+      return subscriptionsMap;
+    },
+
+    globalMessaging() {
+      var [spacename, prop, ...tailArgs] = arguments;
+
+      if (!spacename && !prop) {
+        return this.getSubscribedElements();
+      }
+
+      if (spacename && typeof spacename === 'string' && !prop) {
+        return this.getSubscribedFunctions(spacename);
+      }
+
+      if (typeof spacename !== 'string' || typeof prop !== 'string') {
+        throw new Error('First and second argument must be String types');
+      }
+
+      if (!this.hasSubscribedFunction(spacename, prop)) {
+        this.addToExecutionQueue(spacename, prop, ...tailArgs);
+
+        return undefined;
+      }
+
+      return this.execute(spacename, prop, ...tailArgs);
+    }
+  };
+
+  window.__ace = gmsMethods.globalMessaging.bind(gmsMethods);
+  window.__ace.subscribe = gmsMethods.subscribe.bind(gmsMethods);
+}
+      globalMessagingService();
+    })();"use strict";function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}!function(){var t=function(){var t,e,o=[],n=window,r=n;for(;r;){try{if(r.frames.__tcfapiLocator){t=r;break}}catch(t){}if(r===n.top)break;r=r.parent}t||(!function t(){var e=n.document,o=!!n.frames.__tcfapiLocator;if(!o)if(e.body){var r=e.createElement("iframe");r.style.cssText="display:none",r.name="__tcfapiLocator",e.body.appendChild(r)}else setTimeout(t,5);return!o}(),n.__tcfapi=function(){for(var t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return o;"setGdprApplies"===n[0]?n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0)):"ping"===n[0]?"function"==typeof n[2]&&n[2]({gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"}):o.push(n)},n.addEventListener("message",(function(t){var e="string"==typeof t.data,o={};if(e)try{o=JSON.parse(t.data)}catch(t){}else o=t.data;var n="object"===_typeof(o)&&null!==o?o.__tcfapiCall:null;n&&window.__tcfapi(n.command,n.version,(function(o,r){var a={__tcfapiReturn:{returnValue:o,success:r,callId:n.callId}};t&&t.source&&t.source.postMessage&&t.source.postMessage(e?JSON.stringify(a):a,"*")}),n.parameter)}),!1))};"undefined"!=typeof module?module.exports=t:t()}();(function () { var e = false; var c = window; var t = document; function r() { if (!c.frames["__uspapiLocator"]) { if (t.body) { var a = t.body; var e = t.createElement("iframe"); e.style.cssText = "display:none"; e.name = "__uspapiLocator"; a.appendChild(e) } else { setTimeout(r, 5) } } } r(); function p() { var a = arguments; __uspapi.a = __uspapi.a || []; if (!a.length) { return __uspapi.a } else if (a[0] === "ping") { a[2]({ gdprAppliesGlobally: e, cmpLoaded: false }, true) } else { __uspapi.a.push([].slice.apply(a)) } } function l(t) { var r = typeof t.data === "string"; try { var a = r ? JSON.parse(t.data) : t.data; if (a.__cmpCall) { var n = a.__cmpCall; c.__uspapi(n.command, n.parameter, function (a, e) { var c = { __cmpReturn: { returnValue: a, success: e, callId: n.callId } }; t.source.postMessage(r ? JSON.stringify(c) : c, "*") }) } } catch (a) { } } if (typeof __uspapi !== "function") { c.__uspapi = p; __uspapi.msgHandler = l; c.addEventListener("message", l, false) } })();!function(e){var n={};function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:r})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,n){if(1&n&&(e=t(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(t.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var o in e)t.d(r,o,function(n){return e[n]}.bind(null,o));return r},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="/",t(t.s=0)}([function(e,n,t){"use strict";t.r(n);var r=function(e,n){var t={allRegulations:!1,cb:n,regulationType:"gdpr"};return(0,window.__ace)("djcmp","regulationApplies",[e,t])},o=function(e,n){var t={allRegulations:!1,cb:n,regulationType:"usp"};return(0,window.__ace)("djcmp","regulationApplies",[e,t])};!function(){var e=[];function n(){e.push(arguments)}window.djcmp||(n.gdprApplies=r,n.ccpaApplies=o,n.queue=e,window.djcmp=n)}()}]);
+    </script>
+  
+    <script>
+    __ace('dataLayer', 'setData', [{ abtUrl: "" }])
+    </script>
+  
+    <script>
+    __ace('dataLayer', 'setData', [{ isUsingOrchestrator: true, abtConfig: {"status":{"code":"ERROR_MISSING_REQUIRED_OPTION_SITE","description":"Data missing in Orchestrator integration. Ad configuration data is currently unavailable - Site.","type":"error"}} }])
+    </script>
+  
+    <script>
+    var ace_data = JSON.parse('{}');
+    </script>
+  <link rel="preload" href="https://djcs-multi-region-assets-ohio.s3.us-east-2.amazonaws.com/djcs-adtech/shared/asset/ace/ace.min.js" as="script" />
+    <script
+      async
+      src="https://djcs-multi-region-assets-ohio.s3.us-east-2.amazonaws.com/djcs-adtech/shared/asset/ace/ace.min.js"
+      data-product="dowjones"
+      data-ace-uac-url="https://djcs-multi-region-assets-ohio.s3.us-east-2.amazonaws.com/djcs-adtech/shared/asset/ace"
+      data-config="%7B%22enableAmpDjcmp%22%3Atrue%2C%22enableGpt%22%3Atrue%2C%22enableLog%22%3Atrue%2C%22enableSourcepoint%22%3Atrue%2C%22enableSSR%22%3Atrue%2C%22enableUsp%22%3Atrue%2C%22enableProximicInlined%22%3Afalse%2C%22enableAdtoniqInlined%22%3Afalse%2C%22enableNewTcfStubs%22%3Atrue%7D"
+      data-manifest=""
+      id="ace-manifest">
+      
+    </script>
+    <script>
+    (function () {
+    const setPerfMark = function setPerfMark(metricName) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var _window = window,
+      performance = _window.performance,
+      __ace = _window.__ace;
+  var isNewRelicEnabled = options.isNewRelicEnabled,
+      justNewRelic = options.justNewRelic;
+
+  var _ref = __ace('dataLayer', 'getData', ['performanceStartTime']) || {},
+      performanceStartTime = _ref.performanceStartTime;
+
+  var perfMarkOptions = {};
+
+  if (performanceStartTime) {
+    perfMarkOptions.startTime = performance.now() - performanceStartTime;
+  }
+
+  if (!justNewRelic) {
+    performance.mark(metricName, perfMarkOptions);
+  }
+
+  if (!isNewRelicEnabled) {
+    return;
+  }
+
+  __ace('ace', 'sendMetricToNewRelic', [metricName]);
+};
+    __ace.subscribe('page', { setPerfMark });
+  })();
+    </script>
+  <link rel="preload" href="https://djcs-multi-region-assets-ohio.s3.us-east-2.amazonaws.com/djcs-adtech/shared/asset/ace/djcmp.min.1.0.50.js" as="script" /><script
+      async
+      id="djcmp"
+      src="https://djcs-multi-region-assets-ohio.s3.us-east-2.amazonaws.com/djcs-adtech/shared/asset/ace/djcmp.min.1.0.50.js"
+      type="text/javascript"
+      data-params='{"enableSourcepoint":true,"gdprModalId":741663,"loadVendorScript":true,"permutiveSourcepointId":"5eff0d77969bfa03746427eb","propertyHref":"https://www.dowjones.com","propertyId":3635,"uspModalId":741700,"baseUrl":"https://djcs-multi-region-assets-ohio.s3.us-east-2.amazonaws.com/djcs-adtech/shared/asset/ace","product":"dowjones","enableUsp":true}'
+      
+    >
+    
+    
+    </script>    <!-- The Data Object code -->
+
+<script type="text/javascript">
+
+var utag_data = {
+    // Data Object variables here
+    'channel':  'Dow Jones',    //(hardcoded, same on all pages)
+    'user_type':        'nonsubscriber',   //(leave like this, or if you have subscribers, make the value dynamic)
+    'page_region':       'global',           //(hardcoded, same on all pages)
+    'page_site':         'Dow Jones',     //(hardcoded, same on all pages)
+    'page_site_product':     'DJ',      //(hardcoded, same on all pages)
+    'page_content_type': 'Customer Resources',     //(hardcoded, same on all pages)
+    'page_content_source':   'Dowjones.com',        //(hardcoded, same on all pages)
+    'page_id' : '7695',      //(dynamic ,  unique Id of the page)
+    'page_section':         'About',      //(this value is dynamic , "Home" or "Products"  or "Scoops" ,... based on the document)
+    'page_subsection':         '',      //(needs to be set only on sub-sections, value is dynamic, "Risk and Compliance" or ""Integrated Solutions",...  based on document)
+    'page_title' : 'About',      //(this value is dynamic , "Factiva" or "Risk & Compliance" ,... based on the document)
+    'access_type' : 'free',      //(hardcoded, same on all pages, if all pages are 'free")
+    'language': 'EN'
+ };
+
+</script>
+<!-- Start CMP Code -->
+        <script>
+        function loadTealiumScript() {
+
+            // Omniture Script
+            const utagScript = document.createElement('script');
+            utagScript.src="//tags.tiqcdn.com/utag/wsjdn/dowjonesglobal/prod/utag.js";
+            utagScript.async = true;
+            document.body.appendChild(utagScript);
+
+            // Google Tag Manager
+            const googleTagScript = document.createElement('script');
+            googleTagScript.type  = "text/javascript";
+            googleTagScript.async = true;
+            googleTagScript.text  = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5BMMRHN');";     // use this for inline script
+            document.body.appendChild(googleTagScript);
+
+            //Google Tag Manager (No Script)
+            // var noscriptType = document.createElement('noscript');
+            // var ifrm = document.createElement('iframe');
+            // ifrm.setAttribute('src', "https://www.googletagmanager.com/ns.html?id=GTM-5BMMRHN");
+            // ifrm.setAttribute("height", "0")
+            // ifrm.setAttribute("width", "0")
+            // ifrm.setAttribute("style", "display:none;visibility:hidden")
+            // noscriptType.appendChild(ifrm);
+            // document.body.appendChild(noscriptType);
+
+        }
+
+       /* document.addEventListener("DOMContentLoaded", function(event) {
+          if (
+            window.djcmp &&
+            window.djcmp.gdprApplies &&
+            window.djcmp.gdprApplies("cookieOnly")
+          ) {
+            if (window.ace && typeof window.__ace === "function") {
+              console.log("windows ace on ready");
+              window.__ace("djcmp", "djcmp", ["onReady", loadTealiumScript]);
+            } else {
+              console.log("windows djcmp on ready");
+              window.djcmp("onReady", loadTealiumScript);
+            }
+          } else {
+            loadTealiumScript();
+          }
+        });*/
+        window.__ace('djcmp', 'executeOnCmpReady', [{ cb: loadTealiumScript }]);
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+window.__ace('djcmp', 'getRegulationLinkRenderer', (RegulationLink) => {
+ const linkConfigurations = window.__ace('djcmp', 'getRegulationLinkConfigurations');
+ const { gdpr, usp } = linkConfigurations;
+ const customLinkConfigurations = {
+   ...linkConfigurations,
+   gdpr: {
+     links: [{
+       ...gdpr.links[0],
+       el: document.getElementById('gdpr-link')
+     }]
+   },
+   usp: {
+     links: [{
+       ...usp.links[0],
+       el: document.getElementById('usp-link')
+     },{
+       ...usp.links[1],
+       el: document.getElementById('usp-link-1')
+     }]
+   }
+ };
+
+ new RegulationLink(customLinkConfigurations).render();
+});
+});
+
+      </script>
+<!-- End CMP Code -->
+
+
+    <script src='https://cbb4f28998d749758f484161a16bac35.js.ubembed.com'  async></script>    <link rel="dns-prefetch" href="//tags.tiqcdn.com">
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<script type="text/javascript">
+var utag_data = {
+    "site_name": "Dow Jones",
+    "site_description": "Dow Jones",
+    "page_type": "page",
+    "post_id": 7695,
+    "post_title": "About",
+    "post_author": "nairr",
+    "post_date": "2015\/09\/23",
+    "subtitle": [
+        "The Ultimate Source for Business News and Data"
+    ],
+    "sidebar_widget": [
+        ""
+    ],
+    "logo_image": [
+        ""
+    ],
+    "wp_page_template": [
+        "default"
+    ],
+    "edit_last": [
+        "45"
+    ],
+    "edit_lock": [
+        "1709910748:318"
+    ],
+    "title_text": [
+        "field_551ab396f70af"
+    ],
+    "main_image": [
+        "field_551ab3abf70b0"
+    ],
+    "body_text": [
+        "field_551ab3c4f70b1"
+    ],
+    "csection_boxes_0_cbox_image": [
+        "field_551ab3e9f70b3"
+    ],
+    "csection_boxes_0_cbox_link": [
+        "field_551ab40af70b4"
+    ],
+    "csection_boxes_0_cbox_title": [
+        "field_551ab41ff70b5"
+    ],
+    "csection_boxes_0_cbox_blurb": [
+        "field_551ab42df70b6"
+    ],
+    "csection_boxes": [
+        "field_551ab3d8f70b2"
+    ],
+    "title": [
+        "field_527bcd2ea7d23"
+    ],
+    "content": [
+        "field_52711bedeaaf7"
+    ],
+    "thumbnail_id": [
+        "7925"
+    ],
+    "yoast_wpseo_focuskw": [
+        "Dow Jones"
+    ],
+    "yoast_wpseo_title": [
+        "Dow Jones - About Us"
+    ],
+    "yoast_wpseo_metadesc": [
+        "Dow Jones has grown to be a worldwide news powerhouse, with prestigious brands including WSJ, Dow Jones Newswires, Factiva, Barron\u2019s, MarketWatch and Financial News."
+    ],
+    "yoast_wpseo_linkdex": [
+        "35"
+    ],
+    "exclude_from_search": [
+        "field_562a3d884d233"
+    ],
+    "oembed_cfb5055ed723067d13ae4b5a73dc67ac": [
+        "{{unknown}}"
+    ],
+    "wpb_vc_js_status": [
+        "false"
+    ],
+    "yoast_wpseo_focuskeywords": [
+        "[]"
+    ],
+    "yoast_wpseo_keywordsynonyms": [
+        "[\"\"]"
+    ],
+    "amazon_s3_cache": [
+        "a:6:{s:109:\"\/\/dj.admin.dowjones.net\/dowjones\/wp-content\/uploads\/sites\/43\/2019\/08\/dj_green_horizontal_light_background.png\";i:17610;s:118:\"\/\/dj.admin.dowjones.net\/dowjones\/wp-content\/uploads\/sites\/43\/2019\/08\/dj_green_horizontal_light_background-1024x104.png\";i:17610;s:107:\"\/\/images.dowjones.com\/wp-content\/uploads\/sites\/43\/2019\/08\/15143029\/dj_green_horizontal_light_background.png\";i:17610;s:116:\"\/\/images.dowjones.com\/wp-content\/uploads\/sites\/43\/2019\/08\/15143029\/dj_green_horizontal_light_background-1024x104.png\";i:17610;s:108:\"\/\/djadmin.dowjones.com\/dowjones\/wp-content\/uploads\/sites\/43\/2019\/08\/dj_green_horizontal_light_background.png\";i:17610;s:117:\"\/\/djadmin.dowjones.com\/dowjones\/wp-content\/uploads\/sites\/43\/2019\/08\/dj_green_horizontal_light_background-1024x104.png\";i:17610;}"
+    ],
+    "vc_post_settings": [
+        "a:1:{s:10:\"vc_grid_id\";a:0:{}}"
+    ],
+    "yoast_wpseo_content_score": [
+        "30"
+    ],
+    "schemaorg_markup": [
+        "field_5dc91f6f91c54"
+    ],
+    "yoast_indexnow_last_ping": [
+        "1665078979"
+    ],
+    "user_role": "guest"
+};
+</script>
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v19.0.1 (Yoast SEO v19.4) - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Dow Jones has grown to be a worldwide news powerhouse, with prestigious brands including WSJ, Dow Jones Newswires, Factiva, Barron’s, MarketWatch and Financial News." />
+	<link rel="canonical" href="https://www.dowjones.com/about/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="About" />
+	<meta property="og:description" content="Dow Jones has grown to be a worldwide news powerhouse, with prestigious brands including WSJ, Dow Jones Newswires, Factiva, Barron’s, MarketWatch and Financial News." />
+	<meta property="og:url" content="https://www.dowjones.com/about/" />
+	<meta property="og:site_name" content="Dow Jones" />
+	<meta property="article:publisher" content="https://www.facebook.com/dowjones/" />
+	<meta property="article:modified_time" content="2022-10-06T17:56:18+00:00" />
+	<meta property="og:image" content="https://images.dowjones.com/wp-content/uploads/sites/43/2015/09/28014239/hero-image_Hong-Kong-filter.jpg" />
+	<meta property="og:image:width" content="6639" />
+	<meta property="og:image:height" content="3469" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@dowjones" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.dowjones.com/#website","url":"https://www.dowjones.com/","name":"Dow Jones","description":"Dow Jones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.dowjones.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.dowjones.com/about/#primaryimage","url":"https://images.dowjones.com/wp-content/uploads/sites/43/2015/09/28014239/hero-image_Hong-Kong-filter.jpg","contentUrl":"https://images.dowjones.com/wp-content/uploads/sites/43/2015/09/28014239/hero-image_Hong-Kong-filter.jpg","width":6639,"height":3469},{"@type":"WebPage","@id":"https://www.dowjones.com/about/","url":"https://www.dowjones.com/about/","name":"Dow Jones - About Us","isPartOf":{"@id":"https://www.dowjones.com/#website"},"primaryImageOfPage":{"@id":"https://www.dowjones.com/about/#primaryimage"},"image":{"@id":"https://www.dowjones.com/about/#primaryimage"},"thumbnailUrl":"https://images.dowjones.com/wp-content/uploads/sites/43/2015/09/28014239/hero-image_Hong-Kong-filter.jpg","datePublished":"2015-09-23T12:59:24+00:00","dateModified":"2022-10-06T17:56:18+00:00","description":"Dow Jones has grown to be a worldwide news powerhouse, with prestigious brands including WSJ, Dow Jones Newswires, Factiva, Barron’s, MarketWatch and Financial News.","breadcrumb":{"@id":"https://www.dowjones.com/about/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.dowjones.com/about/"]}]},{"@type":"BreadcrumbList","@id":"https://www.dowjones.com/about/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dowjones.com/"},{"@type":"ListItem","position":2,"name":"About"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Dow Jones &raquo; Feed" href="https://www.dowjones.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dow Jones &raquo; Comments Feed" href="https://www.dowjones.com/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.dowjones.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='styles-css'  href='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/css/styles.css?ver=5.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/css/print.css?ver=5.9.3' type='text/css' media='print' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.dowjones.com/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='cpsh-shortcodes-css'  href='https://www.dowjones.com/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0' type='text/css' media='all' />
+<script>
+if (document.location.protocol != "https:") {
+    document.location = document.URL.replace(/^http:/i, "https:");
+}
+</script>
+<link rel="https://api.w.org/" href="https://www.dowjones.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.dowjones.com/wp-json/wp/v2/pages/7695" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.dowjones.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.dowjones.com/wp-includes/wlwmanifest.xml" /> 
+
+<link rel='shortlink' href='https://www.dowjones.com/?p=7695' />
+<link rel="alternate" type="application/json+oembed" href="https://www.dowjones.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dowjones.com%2Fabout%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.dowjones.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dowjones.com%2Fabout%2F&#038;format=xml" />
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.dowjones.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->		<style type="text/css" id="wp-custom-css">
+			.postid-20154 .product-description-wrap .mobile-hide h1 {
+  display: none;
+}
+
+.page-id-20077 .wrapper.privacy a,.page-id-19880 .wrapper.privacy a{
+	 color: #02a3d5 !important;
+}
+
+.page-id-20077 .wrapper.privacy ul,.page-id-19880 .wrapper.privacy ul {
+	list-style-position: inside;
+}
+
+.page-id-20058 #signup-form-overlay,.page-id-19880 #signup-form-overlay{
+	display:none;
+}
+
+@media (min-width:1025px) {
+.icon-accents > li {
+width:20%;
+}
+}
+.postid-19820 .mobile-header-btn .half-width-wrap{
+	display:none;
+}
+
+.accessibility-statement{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.main.products.other-user-fullwidth {
+    width: 100%;
+}
+.main.products.other-user-fullwidth .product-description-wrap{
+	padding:0px;
+	width:100%;
+}
+
+.other-user-hide {
+    display: none;
+}
+.mobile-hide.other-user,.mobile-hide.other-user {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.mobile-hide.other-user h1, .mobile-hide.other-user  .subheading.max-width{
+	text-align:center;
+}
+
+
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow {
+    margin-right: 2% !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow:nth-child(4) {
+margin-right:0px !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow:nth-child(7) {
+margin-right:0px !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow:nth-child(11) {
+margin-right:0px !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow:nth-child(15) {
+margin-right:0px !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow:nth-child(19) {
+margin-right:0px !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.generic-list li.generic-shadow:nth-child(23) {
+margin-right:0px !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.four-element li > a {
+    display: none !important;
+}
+
+.page-id-7695 .tab-content.leadership ul.four-element li:first-child > a {
+    display: block!important;
+   height: 260px;
+}
+.page-id-7695 .tab-content.leadership ul.four-element li:first-child > a img{
+	display: none;
+}
+
+.page-id-7695 .tab-content.leadership ul li:first-child {
+    height: 545px !important;
+}
+.page-id-7695 .tab-content.leadership ul li {
+    height: 260px !important;
+}
+.page-id-7695 .generic-list > li.last-in-row{
+	margin-right:unset !important;
+}
+.page-id-7695 .tab-content.leadership ul li {
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+.page-id-7695 .tab-content.leadership ul li {
+    height: 300px !important;
+	
+}
+	
+.page-id-7695 .tab-content.leadership ul li:first-child {
+    height: 580px !important;
+}
+}
+
+
+.product_login_icon
+{
+	width:15%;
+	height:10%;
+}
+.pib_notice_td{
+	padding: 10px;
+}
+.barrons-lead-gen-form {
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+display:none;
+}
+.barrons-lead-gen-form label{
+	color:#000;
+	text-transform:unset;
+	    font-family: Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+}
+div.cont {
+    position: relative;
+    *zoom: 1;
+    max-width: 1180px;
+    _width: 1180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.barrons-lead-gen-form button, .barrons-lead-gen-form input, .barrons-lead-gen-form select, .barrons-lead-gen-form textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    vertical-align: middle;
+}
+.barrons-lead-gen-form select{
+	opacity:unset;
+}
+
+.barrons-lead-gen-form  .reg-errors {
+    background: #a71a1a;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: left;
+    display: none;
+    font-family: "FlamaSemibold";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+font-weight: bold;
+}
+
+.barrons-lead-gen-form  .reg-success {
+    background: #7ec07b;
+    color: #fff;
+    padding: 15px 15px;
+    text-align: left;
+    display: none;
+    font-family: "FlamaSemibold";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    margin-bottom: 20px;
+font-weight: bold;
+}
+
+.barrons-lead-gen-form input[type="text"] {
+	width: 100%;
+	height: 50px;
+	padding: 5px 10px;
+	border: 1px solid #dddddd;
+	background-color: #fff;
+	*zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE7E7E8');
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e7e7e8));
+	background-image: -webkit-linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	background-image: -o-linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	background-image: linear-gradient(top, #ffffff 0%, #e7e7e8 100%)
+}
+
+.barrons-lead-gen-form select {
+	width: 100%;
+	height: 50px;
+	padding: 5px 10px;
+	border: 1px solid #dddddd;
+	background-color: #fff;
+	*zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE7E7E8');
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e7e7e8));
+	background-image: -webkit-linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	background-image: -o-linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	background-image: linear-gradient(top, #ffffff 0%, #e7e7e8 100%);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px
+}
+
+.barrons-lead-gen-form .button .submit {
+	float: none;
+	position: relative;
+	background: #54b6c1;
+	background-color: #54b6c1;
+	width: 100%;
+	text-align: center;
+	border: none;
+	color: #fff;
+	margin: 15px 0px;
+	padding: 5px 10px;
+	height: 50px !important;
+	font-size: 19px;
+	-webkit-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out
+}
+
+.barrons-lead-gen-form .button .submit:hover {
+	background: #3698a3
+}
+
+.barrons-lead-gen-form ::-webkit-input-placeholder {
+	color: #000
+}
+
+.barrons-lead-gen-form :-moz-placeholder {
+	color: #000;
+	opacity: 1
+}
+
+.barrons-lead-gen-form ::-moz-placeholder {
+	color: #000;
+	opacity: 1
+}
+
+.barrons-lead-gen-form :-ms-input-placeholder {
+	color: #000
+}
+
+@media (min-width: 480px) {
+	.barrons-lead-gen-form .button .submit {
+		width: 320px !important;
+	}
+}
+
+@media (min-width: 770px) {
+	.barrons-lead-gen-form .col50 {
+		width: 49.39759%;
+		float: left;
+		margin-right: 1.20482%
+	}
+	.barrons-lead-gen-form .col50.last {
+		width: 49.39759%;
+		float: right;
+		margin-right: 0
+	}
+	.barrons-lead-gen-form p.splittext {
+    width: 50%;
+    padding-right: 1%;
+    float: left;
+	}
+	.barrons-lead-gen-form p.splittext+p.splittext {
+    padding-right: 0;
+    padding-left: 1%;
+	}
+	.barrons-lead-gen-form p {
+    font-size: 20px;
+    line-height: 26px;
+	}
+}	
+.barrons-lead-gen-form .button .submit:disabled {
+	background: #ccc;
+	cursor: default;
+}
+.barrons-lead-gen-form form {
+    padding: 20px 0px;
+}
+.barrons-lead-gen-form p {
+    color: #000;
+}
+.barrons-lead-gen-form div{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.barrons-lead-gen-form input[type="checkbox"], .barrons-lead-gen-form input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+
+.postid-4736 .wrapper.small,.postid-4736  section.dark{
+	display:none;
+}
+.postid-4736 .product-description-wrap ,.postid-4736 .main.products {
+    width: 100%;
+    padding: 0px;
+}
+@media only screen and (max-width: 600px) {
+	
+  .cookie_notice_td_content, .notice_td_content
+  {
+	  word-break:break-word;
+  }
+  .page-template-page-policy .notice-content{
+	 width:100%;
+  }
+  .page-template-page-privacy-notice .notice-content{
+	 width:100%;
+  }
+  
+}
+
+@media (max-width: 1024px)
+{
+	.page-template-page-policy .notice-content{
+	 width:100%;
+  }
+	.page-template-page-privacy-notice .notice-content{
+	 width:100%;
+  }
+}
+.notice-content
+{
+	width:74%;
+	float:right;
+}
+.notice_title
+{
+	font-size:24px;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	color:black;
+	text-transform:uppercase;
+	font-weight:normal;
+	margin-bottom:9.6pt;
+	line-height:normal
+}
+.notice_content
+{
+	font-family: SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size:100%;
+	color:#0c2a31;
+}
+.notice_sub_title
+{	
+	font-family: SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	margin-bottom: 10px;
+	color: #4f5b66;
+    font-size: 20px;
+    font-weight: 500;
+}
+.notice_sub_title_2
+{
+	font-family: SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	margin-bottom: 10px;
+	/*color:rgb(57,72,89);*/
+	color: #707070;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.notice_td{
+	border:solid windowtext 1.0pt;
+	background:#D9D9D9;
+	padding:0in 5.4pt 0in 5.4pt;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+}
+.notice_td_title_span{
+	font-size:100%;
+	line-height:115%;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+}
+.notice_td_content{
+    border: solid windowtext 1.0pt;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size:100%;
+	padding: 0in 5.4pt 0in 5.4pt
+}
+.td_span{
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size:100%;
+}
+.td_span_table_2{
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size:100%;
+}
+.section_title{
+	color: #02a3d5!important;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size:12.0pt;
+	font-weight:normal;
+}
+
+.cookie_notice_td_content{
+    border: solid windowtext 1.0pt;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size:100%;
+	padding: 0in 5.4pt 0in 5.4pt;
+	word-wrap: break-word;
+}
+.cookie_notice_td_title_span{
+	font-size:100%;
+	line-height:115%;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+}
+.notice_link_color{
+	color:#02a3d5!important;/* #3D8CBC*/
+    text-decoration:none;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size: 100%;
+}
+.notice_ul
+{
+	margin-left:30px;
+	font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size: 100%;
+}
+
+ .policy-content {
+  padding-bottom: 16px;
+}
+
+
+
+
+
+
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  font-family:SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+	font-size: 100%;
+}
+ .dcf-table thead {
+  font-size: 100%;
+		font-weight:bold;
+}
+.dcf-table tbody {
+  font-size: 100%;
+		
+}
+.dcf-table tfoot {
+  font-size: 100%
+}
+.dcf-table tbody {
+  border-bottom: 1px solid #e3e3e2;
+  border-top: 1px solid #e3e3e2
+}
+.dcf-table td, .dcf-table th {
+  padding-right: 1.78em
+}
+.dcf-table-bordered, .dcf-table-bordered td, .dcf-table-bordered th {
+  border: 1px solid #e3e3e2
+}
+.dcf-table-bordered td, .dcf-table-bordered th, .dcf-table-striped td, .dcf-table-striped th {
+  padding-left: 1em;
+  padding-right: 1em
+}
+.dcf-table-bordered tr:not(:last-child), .dcf-table-striped tr:not(:last-child) {
+  border-bottom: 1px solid #e3e3e2
+}
+.dcf-table-striped tbody tr:nth-of-type(2n) {
+  background-color: #f6f6f5
+}
+.dcf-table thead td, .dcf-table thead th {
+  padding-bottom: .75em;
+  vertical-align: bottom
+}
+.dcf-table tbody td, .dcf-table tbody th, .dcf-table tfoot td, .dcf-table tfoot th {
+  padding-top: .75em;
+  vertical-align: top
+}
+.dcf-table tbody td, .dcf-table tbody th {
+  padding-bottom: .75em
+}
+.dcf-table-bordered thead th {
+  padding-top: 1.33em
+}
+.dcf-wrapper-table-scroll {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1em;
+  position: relative;
+  right: 50%;
+  width: 100vw
+}
+@media only screen and (max-width:42.09em) {
+  .dcf-table-responsive thead {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap
+  }
+  .dcf-table-responsive tr {
+    display: block
+  }
+  .dcf-table-responsive td {
+    -webkit-column-gap: 3.16vw;
+    -moz-column-gap: 3.16vw;
+    column-gap: 3.16vw;
+    display: -ms-grid;
+    display: grid;
+    text-align: left!important
+  }
+  .dcf-table-responsive.dcf-table-bordered, .dcf-table-responsive.dcf-table-bordered thead th {
+    border-width: 0
+  }
+  .dcf-table-responsive.dcf-table-bordered tbody td {
+    border-top-width: 0
+  }
+  .dcf-table-responsive:not(.dcf-table-bordered) tbody tr {
+    padding-bottom: .75em
+  }
+  .dcf-table-responsive:not(.dcf-table-bordered) tbody td {
+    padding-bottom: 0
+  }
+  .dcf-table-responsive:not(.dcf-table-bordered):not(.dcf-table-striped) tbody td {
+    padding-right: 0
+  }
+  .dcf-table-responsive.dcf-table-bordered tbody tr:last-child td:last-child {
+    border-bottom-width: 0
+  }
+  .dcf-table-responsive tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 700;
+    padding-right: 1.78em
+  }
+}
+.home .intro{
+	width:100%
+}
+.home .intro-wrapper{
+	top:10%;
+}
+.btn-line.view-more-toggler.js-product-lines-toggler {
+    display: none;
+}
+
+    .page-id-19880 ul.ulli {
+        padding: 15px 30px;
+    }
+    .page-id-19880 .page-container {
+        padding-top: 30px;
+    }
+    .page-id-19880 .link_color {
+        color: #02a3d5!important;
+        text-decoration: none;
+        font-family: SimplonNorm-Regular,Arial,Helvetica,sans-serif;
+        font-size: 100%;
+    }
+    
+    .page-id-19880 .video-section {
+      height: 100%;
+      padding-top: 30px;
+    }
+    
+    .page-id-19880 .video-frame {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 50%;
+      padding-top: 28%;
+    }
+    
+    /* Then style the iframe to fit in the container div with full height and width */
+    .page-id-19880 .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .page-id-19880 .image-div {
+      width: 50%;
+padding-top: 15px;
+    }
+       .page-id-19880.page-template-notice-ca-residents ul.sectionlinks li{
+            list-style-type: none;
+        }
+       .page-id-19880.page-template-notice-ca-residents .policy-section {
+            /* float: left; */
+            margin-left: 2%;
+            width: 25%;
+            position: fixed;
+            display: none;
+        }
+    
+       .page-id-19880.page-template-notice-ca-residents .policy-content {
+            float: left;
+            width: 100%;
+            margin-left: 1%;
+        }
+    
+       .page-id-19880.page-template-notice-ca-residents .page-header {
+            position: relative !important;
+        }
+      .page-id-19880.page-template-notice-ca-residents .page-wrapper {
+                padding-top: 0px !important;
+        }
+        @media (max-width: 1024px) {    /* for mobile and tablet layout */
+    
+            .page-id-19880.page-template-notice-ca-residents .policy-content {
+            width:100%;
+            }
+    
+            .page-id-19880.page-template-notice-ca-residents .policy-section {
+            display:none;
+            }
+    
+    
+            .page-id-19880.page-template-notice-ca-residents .secondary-menu .secondary-menu-wrapper ul {
+                overflow-x: hidden;
+            }
+        }
+     
+    
+       @media (max-width: 560px) { /* for mobile layout only */
+    
+     .page-id-19880 .video-frame {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+      padding-top: 56.25%;
+    }
+  .page-id-19880 .image-div {
+      width: 100%;
+    }
+           .page-id-19880.page-template-notice-ca-residents .policy-content{
+                width:100%;
+            }
+           
+        }		</style>
+		<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="page-template-default page page-id-7695 page-parent wpb-js-composer js-comp-ver-5.4.5 vc_responsive">
+
+
+<div class="nav-wrapper hidden">
+    <nav class="main-menu">
+    </nav><!-- .main-menu END -->
+
+    <div class="main-menu-wrapper">
+        <a href="javascript:;" class="close"><span class="ico-close"></span></a>
+        <ul id="menu-main-navigation" class="main-menu-list"><li id="menu-item-7761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7761"><a href="https://www.dowjones.com/">Home</a></li>
+<li id="menu-item-9113" class="menu-item menu-item-type-taxonomy menu-item-object-product-category menu-item-9113"><a href="https://www.dowjones.com/product-category/all/">Products</a></li>
+<li id="menu-item-21128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21128"><a href="https://www.dowjones.com/smartmoney/">Dow Jones Smart Money</a></li>
+<li id="menu-item-13927" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13927"><a href="https://www.dowjones.com/insights/">Insights</a></li>
+<li id="menu-item-18726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18726"><a href="https://www.dowjones.com/press-room/">Press Room</a></li>
+<li id="menu-item-7994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7994"><a href="https://www.dowjones.com/scoops/">Scoops</a></li>
+<li id="menu-item-7762" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7695 current_page_item menu-item-7762"><a href="https://www.dowjones.com/about/" aria-current="page">About</a></li>
+<li id="menu-item-7904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7904"><a href="https://www.dowjones.com/careers/">Careers</a></li>
+<li id="menu-item-8602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8602"><a href="https://www.dowjones.com/contact/">Contact</a></li>
+</ul>        <ul id="menu-secondary-navigation" class="main-menu-additional"><li id="menu-item-15099" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15099"><a href="https://www.dowjones.com/contact/">CONTACT SALES<span class="ico-arrow-right-big"></span></a></li>
+<li id="menu-item-8001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8001"><a href="https://subscribe.wsj.com/">SUBSCRIBE TO THE WALL STREET JOURNAL<span class="ico-arrow-right-big"></span></a></li>
+<li id="menu-item-8000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8000"><a href="https://subscribe.barrons.com">SUBSCRIBE TO BARRON&#8217;S<span class="ico-arrow-right-big"></span></a></li>
+</ul>    </div><!-- .main-menu-wrapper END -->
+</div><!-- .nav-wrapper END -->
+<div class="page-wrapper">
+    <header class="page-header dropdown-submenu-opened">
+        <div class="wrapper">
+            <div class="logo"><a href="https://www.dowjones.com" title="Go to homepage      "><img src="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/logo-dow-jones.png" alt="Dow Jones"></a></div>
+            <ul class="breadcrumb desktop-all-hide"><li><span class="ico-arrow-right-big"></span><a href="https://www.dowjones.com" title="Dow Jones"><strong>Dow Jones</strong></a></li></ul><ul class="breadcrumb mobile-hide"><li><span class="ico-arrow-right-big"></span><a href="javascript:void(0);" title="About" class="inactive">About</a></li></ul>            <div class="header-right">
+                                <div class="submenu-wrap">
+                    <a class="dropdown-submenu-toggle" href="javascript:;">Log in      <span class="ico-arrow-down"></span></a>
+                    <div class="dropdown-submenu">
+    <div class="wrapper">
+                    <ul class="dropdown-submenu-list">
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                                    <h3><a href="https://djrc.dowjones.com/">RiskCenter</a></h3>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                                    <h3><a href="https://kybp.cericosolutions.com/">RiskCenter | Third Party</a></h3>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                                    <h3><a href="https://riskcenter.dowjones.com/">RiskCenter | Financial Crime</a></h3>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                                    <h3><a href="https://global.factiva.com/factivalogin/login.asp?productname=global">Factiva</a></h3>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                                    <h3><a href="https://store.wsj.com/">The Wall Street Journal</a></h3>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="submenu-table">
+                            <div class="submenu-table-cell">
+                                                                    <h3><a href="https://djlogin.dowjones.com/login.asp?productname=rnc">Risk &amp; Compliance</a></h3>
+                                                            </div>
+                        </div>
+                    </li>
+                            </ul>
+            </div><!-- .wrapper END -->
+</div><!-- .dropdown-submenu END -->                </div>
+                <a href="#search-pop-up" class="search-popup-trigger"><span class="ico-search"></span></a>
+                <a href="javascript:;" class="hamburger-toggle"><span class="ico-hamburger"></span></a>
+            </div>
+        </div><!-- .wrapper END -->
+    </header><!-- .page-header END -->
+
+    <section class="mobile-header-btn">
+        <div class="wrapper">
+	                            </div>
+    </section>
+
+
+
+
+<script type="text/html" id="template_resource">
+	
+	<%
+		var sections = [];
+		for (var i in resources) {
+			if (resources.hasOwnProperty(i)){
+				sections.push(i);
+			}
+		}
+		sections = sections.sort().reverse();
+	%>
+	
+	<% for (var i in sections) { _section = sections[i]; %>
+		<div class="downloads-section hidden">
+			<div class="downloads-header">
+				<h3><%=_section%></h3>
+				<span class="ico-arrow-down-big"></span>
+			</div><!-- /.downloads-header -->
+
+			<div class="downloads-content">
+				<ul class="downloads-content-list">
+					<% for (var section in resources[_section]) { %>
+						<li>
+							<h4><%=section%></h4>
+							<div class="download-all">
+								<a class="btn-simple" href="<%=resources[_section][section].zip_url%>">Download all <span class="ico-download"></span></a>
+							</div><!-- /.download-one-by-one -->
+
+							<div class="download-one-by-one">
+								<ul>
+									<% for (var item in resources[_section][section]) { %>
+										<% if (item != 'zip_url') { %>
+											<li><a href="<%=resources[_section][section][item].file_url%>" target="_blank"><%=resources[_section][section][item].title%> <span class="ico-arrow-right-big"></span></a></li>
+								        <% } %>
+									<% } %>
+								</ul>
+							</div><!-- /.download-one-by-one -->
+						</li>
+					<% } %>
+				</ul>
+			</div><!-- /.downloads-content -->
+		</div><!-- /.download-section -->
+	<% } %>
+</script>
+
+<div class="main-accent small">
+	<div class="intro" style="background-image: url(https://images.dowjones.com/wp-content/uploads/sites/43/2015/09/28014239/hero-image_Hong-Kong-filter.jpg);">
+		<div class="intro-table">
+			<div class="intro-table-cell">
+
+				<div class="slogan heading-description">Dow Jones      </div>
+									<h1 class="big">The Ultimate Source for Business News and Data</h1>
+								<div class="intro-text">
+					<div class="free-content">
+						<p><span style="font-weight: 400;">Every day, Dow Jones’ advanced data capabilities, award-winning journalism and innovative technology deliver news, tools and financial insight to move markets, inform critical decisions and power top companies and careers&#8230;</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- .intro END -->
+
+</div><!-- .main-accent END -->
+<!-- <a href="javascript:;" class="js-to-content to-content"><span class="ico-arrow-down-big"></span></a> -->
+
+<section class="dark no-padding tabs-wrap" id="what-we-do">
+	<em class="left-shadow"></em>
+	<div class="wrapper no-padding">
+		<div class="tabs-nav iscroll-tabs">
+			<ul class="tabs-nav-list">
+									<li><a href="javascript:;" data-tab-to-open="what-we-do-section">What We Do</a></li>
+									<li><a href="javascript:;" data-tab-to-open="team-leadership-section">our leadership</a></li>
+										<li><a href="javascript:;" data-tab-to-open="our-core-values-section">OUR CORE VALUES</a></li>
+												<li><a href="javascript:;" data-tab-to-open="our-commitment-section">Our Commitment</a></li>
+							</ul>
+			<div class="tabs-nav-pointer hidden">
+				<span></span>
+			</div>
+		</div>
+		<!-- .tabs-nav END -->
+	</div>
+	<em class="right-shadow"></em>
+</section>
+
+<section class="light">
+	<div class="wrapper lazy-loading">
+
+											<div class="tab-content" data-tab="what-we-do-section">
+				<div class="centered text-center">
+					<div class="free-content">
+						<p><span style="font-weight: 400">Since 1882, Dow Jones has been finding new ways to bring information to the world’s top business entities. Beginning as a niche news agency in an obscure Wall Street basement, Dow Jones has grown to be a worldwide news and information powerhouse, with prestigious brands including The Wall Street Journal, Dow Jones Newswires, Factiva, Barron’s, MarketWatch and Financial News. </span></p>
+<p><span style="font-weight: 400">This longevity and success is due to a relentless pursuit of accuracy, depth and innovation, enhanced by the wisdom of past experience and a solid grasp on the future ahead. More than its individual brands, Dow Jones is a modern gateway to intelligence, with innovative technology, advanced data feeds, integrated solutions, expert research, award-winning journalism and customizable apps and delivery systems to bring the information that matters most to customers, when and where they need it, every day. </span></p>
+					</div>
+				</div>
+							</div>
+		
+											<div class="tab-content" data-tab="our-core-values-section">
+				<div class="centered text-center">
+					<div class="free-content">
+						<p><strong>Impact</strong></p>
+<p>We make a difference in the world by providing people with reliable journalism, data and analysis to make decisions in business, finance, policy and life.</p>
+<p><strong>Trust</strong></p>
+<p>We hold ourselves to impeccable ethical standards, honor our commitments and are dedicated to accuracy and facts.</p>
+<p><strong>Collaboration</strong></p>
+<p>We believe in the power of community and are passionate about fostering connections with our audiences, members, customers and each other – because together we are stronger.</p>
+<p><strong>Excellence</strong></p>
+<p>We strive for the highest quality in everything we do, take pride in our work and pursue new approaches with open minds to surpass the highest expectations.</p>
+					</div>
+				</div>
+							</div>
+		
+											<div class="tab-content" data-tab="our-commitment-section">
+				<div class="centered">
+					<div class="free-content">
+						<p><b>Diversity, Equity and Inclusion</b></p>
+<p><span style="font-weight: 400;">Diversity, equity and inclusion are integral to our culture and advancing the mission of Dow Jones. We strive to foster a culture of learning that is welcoming, supportive and empowering, where everyone feels they belong. We believe that by embracing a diversity of backgrounds, experiences and perspectives, we can better meet the needs of our audiences and customers who rely on our trusted journalism, data and analysis to make decisions. We are committed to continuously growing as a company by seeking team members, vendors and suppliers who reflect the broader community we serve.</span></p>
+<p><b>Accessibility</b></p>
+<p><span style="font-weight: 400;">Dow Jones is committed to serving a wide and diverse audience and is dedicated to making our products accessible and user-friendly for all. We welcome your feedback and encourage you to contact us if you have experienced any difficulty viewing, listening to or navigating content on any of our platforms. We’d also like to hear if you have identified any content or functionality that you believe is not accessible to people with disabilities.</span></p>
+<p><span style="font-weight: 400;">We invite you to send any questions, feedback or suggestions for improvement to our Accessibility team at </span><a href="mailto:Accessibility@dowjones.com"><span style="font-weight: 400;">Accessibility@dowjones.com</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Please be advised that while we may not be able to respond to every email, we will acknowledge receipt of your message and promise its review by our Accessibility team.</span></p>
+<p><span style="font-weight: 400;">We take your feedback very seriously and will apply it to our ongoing efforts to improve the accessibility experience for all of our valued customers.</span></p>
+<p><b>Modern Slavery </b></p>
+<p><span style="font-weight: 400;">Dow Jones, along with its parent organization, News Corporation, operates in compliance with the U.K. Modern Slavery Act. To view the News Corporation Modern Slavery Statement, please </span><a href="https://newscorp.com/corporate-governance/modern-slavery-statement/"><span style="font-weight: 400;">click here</span></a><span style="font-weight: 400;">.</span></p>
+					</div>
+				</div>
+							</div>
+		
+				<div class="tab-content leadership" data-tab="team-leadership-section">
+																									<ul class="generic-list generic-left-pane generic-list-multiple dynamic-height four-element" data-per-row="4">
+						
+																											<li class="generic-shadow">
+																	<a href="https://www.dowjones.com/team/almar-latour/" style="background-image: url(https://images.dowjones.com/wp-content/uploads/sites/43/2018/08/29160820/almar-l1.png)">
+										<img src="https://images.dowjones.com/wp-content/uploads/sites/43/2018/08/29160820/almar-l1.png" class="pane-bkg desktop-all-hide" alt="ALMAR LATOUR">
+										<div class="hover-effect mobile-hide"></div>
+									</a>
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/almar-latour/">ALMAR LATOUR</a></h3>
+																			<div class="pane-date">Chief Executive Officer, Dow Jones <br> Publisher, The Wall Street Journal</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Almar Latour is Publisher of The Wall Street Journal and CEO of Dow Jones, a world-leading news and business information services company.
+A journalist-turned-business leader, Almar combines a passion for news and technology with rich global experience and an entrepreneurial drive. Under his leadership, Dow Jones has doubled digital subscriptions and achieved record profits and revenue, while safeguarding the Wall Street Journal’s reputation as one of the world’s most-trusted news organizations.
+Almar has an extensive track record of building successful news media businesses in the digital age. He oversaw the creation of the Barron’s Group, quadrupling the group’s digital audience at Barron’s and MarketWatch, and led the highly-successful modernization of The Wall Street Journal’s website during the global financial crisis, setting the stage for the Journal’s first million digital subscriptions. Almar also led the development of The Wall Street Journal in Japan, Korea and China.
+Almar has worked on three continents and has been stationed as a journalist in Brussels, London, Stockholm, New York and Hong Kong. Among a wide range of topics, he has reported on Central and Eastern Europe, technology and the rise of mobile phones, the Nordics and the Baltics as well as numerous mega-mergers. In addition to being a reporter, he has served as a bureau chief in New York, the managing editor of the Wall Street Journal online, and the editor-in-chief of The Wall Street Journal and Dow Jones in Asia-Pacific before being appointed the Journal’s Executive Editor.
+Almar regularly discusses issues including the business of media, press freedom, global affairs and journalism in the era of generative AI. He started as a news assistant in Washington, D.C.
+He is a native of the Netherlands and lives in New York City.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/almar-latour/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/mae-cheng/">MAE CHENG</a></h3>
+																			<div class="pane-date">Executive Vice President and General Manager, Leadership Products and Services</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Mae Cheng is the executive vice president and general manager of leadership products and services at Dow Jones. She oversees Dow Jones’s leadership and C-Suite products and is responsible for the financial performance of the company’s luxury portfolio, comprised of WSJ. Magazine, Penta and Mansion Global.
+Most recently, she managed the P&amp;L of a portfolio that included a number of the Dow Jones consumer brands, including Barron&#8217;s, MarketWatch and Financial News. In that role, Mae spearheaded efforts that drove record revenue and subscription growth for the publications.
+She was previously the publisher and editor at Mansion Global, the premiere news site for luxury residential properties around the world, and Barron’s Penta, a wealth management and luxury publication.
+Mae has been at the forefront of digital strategy efforts in newsrooms and has led a number of start-up initiatives. In a prior role as special projects editor for Dow Jones and The Wall Street Journal, Mae worked on the launch of a suite of professional services content verticals and was key to the development of the editorially driven events portion of The Wall Street Journal’s subscriber benefits program.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/mae-cheng/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/david-cho/">DAVID CHO</a></h3>
+																			<div class="pane-date">Editor in Chief, Barron’s & Head of Editorial Content for Dow Jones Wealth and Investing</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											David Cho is the editor in chief of Barron’s and head of editorial content for Dow Jones Wealth and Investing, which includes publications such as MarketWatch, Investor’s Business Daily and Financial News London.
+Under his leadership, Barron’s has hit new heights in monthly unique readership and continues to set record numbers of subscribers. For its work in 2022 and 2023, the publication won two SABEW Best in Business awards and was named a finalist for four others, including for General Excellence.
+Previously, David was the business editor of the Washington Post, where he worked for 20 years. As business editor, his digital-first focus led to aggressive expansion, both journalistic and geographic, as well as substantial audience growth. Under his leadership, the Washington Post’s business desk won four Gerald Loeb awards over a two-year span for its work in 2019 and 2020.
+In 2014, David was a member of The Washington Post team that won the Pulitzer Prize for Public Service for its reporting on the Snowden documents. In 2010, he was the primary editor of a series on compromised medical research that won a George Polk Award. His writing about the financial crisis, which included a major exclusive about the pending failure of Lehman Brothers, was named by the Columbia Journalism School during its centennial celebration as one of its “100 Great Stories” of the last century.
+Before joining The Washington Post in 2001, David worked at The Star-Ledger, The Philadelphia Inquirer and The Korea Herald.
+David got his MBA from Columbia Business School and also has master’s degrees from the Columbia Journalism School and the Columbia School of International and Public Affairs. He is a graduate of Yale University.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/david-cho/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																	<a href="https://www.dowjones.com/team/jason-conti/" style="background-image: url(https://images.dowjones.com/wp-content/uploads/sites/43/2018/08/29161126/jason-c1.png)">
+										<img src="https://images.dowjones.com/wp-content/uploads/sites/43/2018/08/29161126/jason-c1.png" class="pane-bkg desktop-all-hide" alt="JASON CONTI">
+										<div class="hover-effect mobile-hide"></div>
+									</a>
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/jason-conti/">JASON CONTI</a></h3>
+																			<div class="pane-date">Executive Vice President and General Counsel, Chief Compliance Officer, Dow Jones</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Jason Conti is the executive vice president and general counsel, chief compliance officer at Dow Jones. As general counsel, he oversees the company’s legal department, which includes a team of professionals handling labor and employment, commercial agreements, privacy, IP, M&amp;A, litigation, compliance, media law and a variety of other specialties.
+As chief compliance officer, Jason manages the development of the company’s compliance program, including screening for compliance with international sanctions programs, enforcement of various company policies—such as the Dow Jones Code of Conduct—and bolstering internal systems and controls.
+Jason joined Dow Jones in 2008 as vice president and associate general counsel. In 2014, he took on the role of deputy general counsel at Dow Jones where he managed domestic and international litigation, and served as the company’s lead press attorney. 
+Before joining Dow Jones, Jason worked at Hogan &amp; Hartson LLP where he defended media companies in defamation, privacy and copyright actions.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/jason-conti/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/brian-crotty/">BRIAN CROTTY</a></h3>
+																			<div class="pane-date">Executive Vice President and General Manager, Dow Jones Energy</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Brian Crotty is executive vice president and general manager of Dow Jones Energy, a global leader in data, analytics and information serving energy and chemical markets. He joined Dow Jones in February 2022 as part of the company’s acquisition of OPIS and also sits on the board of directors for Dow Jones Foundation, which supports organizations involved with journalism, free press, literacy, education and the arts.
+Brian has extensive experience in commodity markets and running news, database, SaaS platform and analytics businesses. Prior to joining Dow Jones, Brian was an executive vice president at IHS Markit, leading their $900 million Energy and Natural Resources Group. From 2002 to 2015, he was CEO of OPIS, leading several acquisitions and ultimately the sale of OPIS to IHS Markit.
+Before joining OPIS in 2002, Brian spent eight years as a vice president at Hart Publications, an energy infrastructure company specializing in magazines and advertising supported events.
+Brian is a journalist by trade, having spent his early years with OPIS covering downstream energy markets. He has a master’s degree in Journalism from American University and an undergraduate degree from Johns Hopkins University.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/brian-crotty/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/dianne-desevo/">DIANNE DESEVO</a></h3>
+																			<div class="pane-date">Chief People Officer, Dow Jones</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Dianne DeSevo, is the chief people officer at Dow Jones and brings more than 25 years of experience in leading multi-faceted, award-winning HR teams across the media and agency industries.
+She is responsible for empowering our employees to have impact by driving the strategy across all People functions, in partnership with Dow Jones business units, leading Talent; Culture; Diversity, Equity &amp; Inclusion; Rewards &amp; Wellness; Organization Development; Workplace Experience; and Workforce Resilience &amp; Security.
+Prior to joining Dow Jones, Dianne was the chief people officer at ENGINE and held senior HR roles at The Walt Disney Company and Time Warner (Warner Media).										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/dianne-desevo/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/artem-fishman/">ARTEM FISHMAN</a></h3>
+																			<div class="pane-date">Chief Technology Officer, Dow Jones</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Artem Fishman is chief technology officer at Dow Jones. He oversees a global team of engineers responsible for technology and product rollouts across Dow Jones brands, including The Wall Street Journal, Barron’s and the company’s business intelligence products and services.
+Artem is a veteran technology executive with a long track record of spearheading premier consumer products in the news, media and financial services industries. Prior to joining Dow Jones, he served as senior director of engineering at LinkedIn, where he oversaw the company’s homepage surface and content experiences. He also served as the research &amp; development lead at LinkedIn in New York. Artem has also held senior leadership roles at SoundCloud, Yahoo, Thomson Reuters and The New York Times.
+A graduate of New York University, Artem currently serves as co-chair of the New York CTO Club, an independent, not-for-profit group of senior technologists.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/artem-fishman/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/elayne-gan/">ELAYNE GAN</a></h3>
+																			<div class="pane-date">General Manager, Asia Pacific and Vice President, Head of B2B Sales, Asia Pacific</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Elayne Gan serves as general manager, Asia Pacific and vice president, head of B2B sales for Asia Pacific at Dow Jones.
+As general manager of Asia Pacific, Elayne is responsible for identifying growth opportunities across Dow Jones businesses in the region, while actively representing the organization as part of its global leadership team. Elayne also has a pivotal role in overseeing APAC’s regional strategy for Dow Jones’s rapidly growing B2B business.
+As a driven, goal-oriented and collaborative people manager, Elayne is also a passionate and active advocate for Diversity, Equity and Inclusion. Having led the establishment of Dow Jones’s APAC DEI Council in 2019 where she served as co-chair for three years, she continues to ensure DEI is embraced across the company in her leadership role.
+Elayne brings more than 17 years of sales management experience and has a strong track record for driving growth. She is based in Singapore and has been with Dow Jones for more than a decade, having held sales roles previously with M1 and WPG International.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/elayne-gan/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																	<a href="https://www.dowjones.com/team/paul-gigot/" style="background-image: url(https://images.dowjones.com/wp-content/uploads/sites/43/2017/08/29161501/paul-g1.png)">
+										<img src="https://images.dowjones.com/wp-content/uploads/sites/43/2017/08/29161501/paul-g1.png" class="pane-bkg desktop-all-hide" alt="PAUL GIGOT">
+										<div class="hover-effect mobile-hide"></div>
+									</a>
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/paul-gigot/">PAUL GIGOT</a></h3>
+																			<div class="pane-date">Editor, Editorial Page and Vice President, The Wall Street Journal</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Paul Gigot is the editorial page editor and vice president of The Wall Street Journal. He is responsible for the publication’s Opinion content, including editorials, op-ed articles, book reviews and arts criticism. He is also the host of the weekly half-hour news program, the Journal Editorial Report, on the Fox News Channel.
+Paul joined the Journal in 1980 as a reporter in Chicago. In 1982, he became the Journal’s Asia correspondent, based in Hong Kong. He won an Overseas Press Club award for his reporting on the Philippines, and in 1984 was named the first editorial page editor of The Asian Wall Street Journal. In 1987, Paul was assigned to Washington, where he wrote editorials and a weekly column on politics—“Potomac Watch”—which won the 2000 Pulitzer Prize for commentary. In 2010, he received the Bradley Prize from the Lynde and Harry Bradley Foundation, which recognizes individuals for “the promotion of liberal democracy, democratic capitalism and the defense of American institutions.”
+Paul is a former chair of the Pulitzer Prize Board.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/paul-gigot/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/joel-lange/">JOEL LANGE</a></h3>
+																			<div class="pane-date">Executive Vice President and General Manager, Risk &amp; Research</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											As executive vice president and general manager, Risk &amp; Research at Dow Jones, Joel Lange is responsible for the strategic roadmap for the Risk &amp; Compliance and Factiva businesses.
+He rejoined Dow Jones in 2021 after four years at ION Analytics, where he led the Risk &amp; Compliance division through a period of significant organic and inorganic growth across a product portfolio focusing on Anti-Money Laundering, Anti-Corruption, CyberSecurity and Enhanced Due Diligence Reports.
+Previous to this, Joel spent six years at Dow Jones, serving as general manager of Risk &amp; Compliance for four years, in addition to roles with WSJ, Factiva and other projects for the Business Intelligence group.
+Joel has nearly 20 years of experience in the compliance and transaction operations industry holding senior management, product, sales and professional service roles at ION Analytics, Dow Jones, LexisNexis Risk Solutions and Broadridge. He is a regular speaker on compliance topics at conferences around the world. Joel holds a BA in International Relations from the University of Minnesota and a MSC in International Finance from the University of Westminster.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/joel-lange/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/traci-mabrey/">TRACI MABREY</a></h3>
+																			<div class="pane-date">General Manager, Factiva</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Traci Mabrey is general manager of Factiva, a business intelligence platform owned by Dow Jones. She has commercial oversight for the Factiva portfolio and since joining Dow Jones has led the strategic reimagination of the Factiva experience for the next generation of decision makers. She is also tasked with infusing AI into the entire Dow Jones portfolio, starting with financial products.
+Traci has deep expertise in financial services technology and wealth management. Previously, she was the head of wealth solutions, global technology and operations for Broadridge Financial Solutions, where she governed a suite of top-tier wealth management and market data solutions.
+As a recognized thought leader and content contributor, Traci is a frequent speaker at industry events and an author of several articles and white papers. She lives in New York and is active in professional women’s organizations, as well as nonprofits committed to financial coaching and skill-building for the next generation.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/traci-mabrey/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/david-martin/">DAVID MARTIN</a></h3>
+																			<div class="pane-date">Chief Revenue Officer for Business Intelligence, Dow Jones</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											David Martin is the chief revenue officer for business intelligence at Dow Jones. He is responsible for corporate sales of Factiva, Risk &amp; Compliance and Dow Jones Newswires products, as well as enterprise sales of The Wall Street Journal, Barron’s, MarketWatch and Investor’s Business Daily.
+David is a seasoned business development executive with more than 25 years of experience leading global sales and marketing teams. He has a proven track record of exceeding sales and revenue growth goals for large, complex organizations by developing successful go-to-market strategies and unleashing the talent capabilities of his teams.
+Prior to joining Dow Jones, he served as global head of sales and marketing and SVP at CoreLogic, as well as managing director of Americas sales marketing and services for Thomson Reuters. He also held numerous leadership roles at Bloomberg Financial Markets, including global head of its foreign exchange offerings.
+David began his career at Brown Brothers Harriman as an operations manager in Boston, with a Bachelor’s degree in Finance from the University of Massachusetts, Amherst.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/david-martin/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/emma-obrian/">EMMA V. O&#8217;BRIAN</a></h3>
+																			<div class="pane-date">Senior Vice President, Strategic Initiatives and Chief of Staff</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Emma V. O’Brian is the senior vice president of strategic initiatives at Dow Jones and chief of staff to the CEO. Emma is responsible for developing business priorities and ensuring executive and corporate alignment across the Dow Jones portfolio.
+Previously, Emma was global head of product strategy for Bloomberg News with a focus on the terminal audience, sitting at the intersection of editorial, product and sales. She played a leading role in developing strategy and overseeing business plan priorities for newsroom technology, breaking news and markets, and the newsroom of the future. A third generation journalist, Emma has held strategic roles across editorial, communications and operations on all platforms from cable news and radio to magazines and print/web. She received her MBA from George Washington University and her BA from Kenyon College.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/emma-obrian/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/thom-san-filippo/">THOM SAN FILIPPO</a></h3>
+																			<div class="pane-date">Senior Vice President of Customer Service</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Thom San Filippo is the senior vice president of customer service for Dow Jones. He leads a 24&#215;7 award-winning global customer service and operations team that provides best-in-class service for the company’s professional and consumer customers.
+Previously, Thom held several senior roles at Dow Jones, leading customer experience, technology initiatives and program management across the business.
+Before joining Dow Jones in 1999, Thom worked at Qwest Communications, Simon and Schuster, and Viacom, where he focused on internet solutions as a technology consultant.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/thom-san-filippo/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/dan-shar/">DAN SHAR</a></h3>
+																			<div class="pane-date">Executive Vice President and General Manager, Dow Jones Wealth &amp; Investing</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Dan Shar is the executive vice president and general manager of Dow Jones Wealth &amp; Investing, a group that serves a global audience with the most relevant tools and reporting related to markets, investment and personal finance across all of Dow Jones.
+Dan is responsible for overseeing the business activities related to Dow Jones’s entire financial portfolio, comprising Barron’s, MarketWatch, Investor’s Business Daily, Private Equity News, Dow Jones Newswires and Financial News.
+Dan Shar joined Dow Jones in 2016 as the General Manager for MarketWatch. Prior to joining the company, he spent 14 years at Condé Nast in various executive, operations, and marketing roles. He graduated from The University of Pennsylvania with a degree in communications from The Annenberg School of Communications and a concentration in Marketing from The Wharton School of Business.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/dan-shar/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/ashok-sinha/">ASHOK SINHA</a></h3>
+																			<div class="pane-date">Senior Vice President, Head of Corporate Communications</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Ashok Sinha is the senior vice president, head of corporate communications at Dow Jones. He oversees all corporate communications functions globally, including public relations, internal, external, executive and financial communications.
+Prior to Dow Jones, Ashok was senior vice president, head of corporate communications and PR at Audacy, a leading multi-platform audio content and entertainment company. Ashok led Audacy’s communications strategy and execution across the company’s entire portfolio of assets, as well as internal and external communications. With an extensive career in media, Ashok has also held senior communications positions at WarnerMedia, NBCUniversal, Viacom and Publicis Media.
+Ashok is a board member of the 4As Foundation, which endeavors to increase diversity within the advertising, media and marketing industries. He earned a Bachelor of Arts from the University of Maryland, College Park and a Master of Fine Arts degree in Theater from the California Institute of the Arts.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/ashok-sinha/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																	<a href="https://www.dowjones.com/team/josh-stinchcomb/" style="background-image: url(https://images.dowjones.com/wp-content/uploads/sites/43/2018/08/29161159/josh-s.png)">
+										<img src="https://images.dowjones.com/wp-content/uploads/sites/43/2018/08/29161159/josh-s.png" class="pane-bkg desktop-all-hide" alt="JOSH STINCHCOMB">
+										<div class="hover-effect mobile-hide"></div>
+									</a>
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/josh-stinchcomb/">JOSH STINCHCOMB</a></h3>
+																			<div class="pane-date">Executive Vice President and Chief Revenue Officer, The Wall Street Journal and Barron’s Group</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Josh Stinchcomb is the global chief revenue officer at Dow Jones for Media and Marketing. He oversees advertising and marketing solutions for the company.
+Prior to Dow Jones, Josh held numerous positions at Condé Nast. As chief experience officer, he oversaw branded content, experiential and licensing, and also led rapid revenue growth in content, live and product experiences. His previous roles included SVP of corporate sales and publisher of Condé Nast Digital.
+He is a notable speaker at industry events and an adjunct professor at NYU’s Master of Science in Publishing Program.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/josh-stinchcomb/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/emma-tucker/">EMMA TUCKER</a></h3>
+																			<div class="pane-date">Editor in Chief, The Wall Street Journal and Dow Jones Newswires</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Emma Tucker is editor in chief of The Wall Street Journal and Dow Jones Newswires. She is responsible for all global news gathering and editorial operations.
+Previously, Emma was editor of The Sunday Times—the first female editor of the paper in more than a century. Before that she worked at The Times, where she held several roles including associate features editor and editor of T2, The Times award-winning daily features supplement. Emma also served as editorial director where she helped foster a closer working relationship between the editorial and commercial teams, before being appointed deputy editor.
+Prior to The Times, Emma was a reporter with the Financial Times where she covered economics before moving to work in the Brussels and Berlin bureaus. She returned to London in 2001 where she served in several leadership positions.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/emma-tucker/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/ingrid-verschuren/">INGRID VERSCHUREN</a></h3>
+																			<div class="pane-date">Executive Vice President, Data and AI and General Manager, EMEA, Dow Jones</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Ingrid Verschuren is executive vice president of data and AI and general manager for EMEA at Dow Jones.
+Based in Barcelona, Ingrid oversees the overall data organization, leading a team of global researchers and analysts who are responsible for identifying, aligning and executing against critical data needs across Dow Jones. She owns the vision and cohesive strategy for data and AI across Dow Jones, driving deeper insights to inform business strategy, guide decision making and create more value for customers.
+Previously, Ingrid was managing editor of Dow Jones Risk &amp; Compliance, where she was instrumental in evolving specialist data sets as well as driving the expansion of the global research team. She also held various management positions at Factiva, where she focused on global content strategy and operations.
+Ingrid started her career as a news indexer at Reuters, manually inputting and tagging data in what’s now known as Factiva.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/ingrid-verschuren/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+																											<li class="generic-shadow">
+																<div class="pane">
+									<h3><a href="https://www.dowjones.com/team/sherry-weiss/">SHERRY WEISS</a></h3>
+																			<div class="pane-date">Chief Marketing Officer, Dow Jones</div>
+																		<div class="pane-info">
+										<div class="free-content">
+											Sherry Weiss is the chief marketing officer at Dow Jones. She is a customer-focused marketing and experience leader with a passion for creating marketing programs that drive growth, engagement and retention. Her background has been focused on the intersection of marketing and product, building data-driven strategies and next-gen capabilities aimed at advancing business performance and customer satisfaction.
+Sherry oversees all marketing activities at Dow Jones and The Wall Street Journal, responsible for driving customer acquisition, retention and subscriptions; enhancing and promoting the brand; and optimizing marketing efforts across the Dow Jones ecosystem.
+Prior to joining Dow Jones, Sherry was head of marketing transformation and channel delivery for Citi’s Personal Banking &amp; Wealth Management Group, where she led a multi-year marketing transformation effort for the Credit Card, Retail Bank, Retail Services, Mortgage and Wealth lines of business. Sherry also led marketing strategy and innovation for Citi’s Branded Cards business, where she developed and launched a marketing innovation hub to drive significant growth for the organization.
+Prior to Citi, Sherry was head of loyalty and retention at Jet.com, a rapid growth e-commerce start-up purchased by Walmart in 2016.										</div>
+									</div>
+									<a href="https://www.dowjones.com/team/sherry-weiss/" class="btn-more">Continue Reading      <span class="ico-arrow-right-big"></span></a>
+								</div><!-- .pane END -->
+							</li>
+						
+					</ul>
+									</div>
+	</div>
+</section>
+
+	<section class="dark no-padding tabs-wrap" id="corporate-citizenship">
+		<em class="left-shadow"></em>
+		<div class="wrapper no-padding">
+			<div class="tabs-nav iscroll-tabs">
+				<ul class="tabs-nav-list">
+											<li><a href="javascript:;" data-tab-to-open="corporate-citizenship-section">Corporate Philanthropy</a></li>
+																<li><a href="javascript:;" data-tab-to-open="environmental-policy-section">Dow Jones Green</a></li>
+									</ul>
+				<div class="tabs-nav-pointer hidden">
+					<span></span>
+				</div>
+			</div>
+			<!-- .tabs-nav END -->
+		</div>
+		<em class="right-shadow"></em>
+	</section>
+
+<section class="light" id="environmental-policy">
+	<div class="wrapper lazy-loading">
+
+								<div class="tab-content multiple-content" data-tab="corporate-citizenship-section">
+															<div class="main padding-above">
+							<h2>Corporate Philanthropy</h2>
+							<p>Dow Jones is a News Corp company and is committed to the corporate philosophy that philanthropy and service improve the lives of all people as much as it does our own. News Corp’s mission of supporting communities is realized through its four giving pillars: Journalism, Veterans, Education and Sustainability.</p>
+<p>Learn more about News Corp’s commitment to making a positive impact by visiting our <a href="https://newscorp.com/news-corp-esg-report/">ESG page</a>.</p>
+						</div><!-- .main END -->
+						<aside class="sidebar">
+															<div class="video-wrap">
+									<img src="https://images.dowjones.com/wp-content/uploads/sites/43/2019/10/29161935/ThinkstockPhotos-4652983431.jpg" alt="">
+								</div>
+													</aside><!-- .aside END -->
+												</div>
+		
+					<div class="tab-content" data-tab="environmental-policy-section">
+				<div class="centered">
+					<h2>Dow Jones Green</h2>
+					<div class="free-content">
+						<div style="width: 1920px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-7695-1" width="1920" height="1080" preload="metadata" controls="controls"><source type="video/mp4" src="https://images.dowjones.com/wp-content/uploads/sites/35/2021/10/27135913/DJGreen_sizzle-2021.mp4?_=1" /><a href="https://images.dowjones.com/wp-content/uploads/sites/35/2021/10/27135913/DJGreen_sizzle-2021.mp4">https://images.dowjones.com/wp-content/uploads/sites/35/2021/10/27135913/DJGreen_sizzle-2021.mp4</a></video></div>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Integrity defines the culture at Dow Jones just as it does its journalism and business. Dow Jones strives to be a responsible consumer of energy and resources, as well as a positive influence to our employees and in the communities where we work and live. Our goal is to improve the sustainability of our operations by continuously reducing waste, carbon footprint and energy inefficiencies.</span></p>
+<p><span style="font-weight: 400">We believe sustainability begins as a business proposition, but doesn’t end there. Our mission is to be the source of truth and insight for decision-makers – our core business provides a platform for informing people for the good of society<span style="color: #0c2a31">.</span> Our authoritative and trusted news and information content sets agendas, starts conversations and influences outcomes. We expose fraud, malfeasance and negligence, and we engage our readers about critical issues such as climate change with highly balanced, journalistic integrity. Our information products are directed at a broad, influential audience and provide accurate, fair and trustworthy information that helps businesses become more sustainable.</span></p>
+<p><strong>Dow Jones Green is our company sustainability program which has 3 main objectives: </strong></p>
+<ol>
+<li style="list-style-type: none">
+<ol>
+<li style="font-weight: 400">REDUCE WASTE: Minimize the amount of single-use plastic, food, and other waste generated at work and home</li>
+<li style="font-weight: 400">CHANGE CLIMATE: Reduce our carbon footprint by using energy-efficient equipment, low-carbon transportation methods (walking, biking, carpooling, or using public transportation), and switching to clean energy options, wherever feasible.</li>
+<li style="font-weight: 400">ENGAGE &amp; EDUCATE: Continuously educate and help engage co-workers, customers, suppliers, family and friends to be more environmentally sustainable.</li>
+</ol>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Green teams located across our global offices and plants have developed specific targets and strategies to meet these objectives. These teams are championed by a Dow Jones Executive, and DJ Green is part of our Diversity, Equity and Inclusion program.  </span></p>
+<p><span style="font-weight: 400">In addition, </span><span style="font-weight: 400">as part of </span><a href="https://newscorp.com/news-corp-sustainability/"><b>News Corp’s Global Environmental Initiative</b></a><b>,</b><span style="font-weight: 400"> Dow Jones also plans to: </span></p>
+<ul>
+<li style="font-weight: 400">Reduce our operational carbon emissions by 60% and our supply chain carbon emissions 20% by 2030 (2016 base year), in line with our commitment to the <a href="https://sciencebasedtargets.org/">Science Based Target initiative</a> (SBTi) to limit global temperature rise 1.5°C above pre-industrial levels. This also aligns with our long-term vision to reduce our carbon footprint to net zero by 2050.</li>
+<li style="font-weight: 400">Minimize single-use plastic and other wastes within our business, while maintaining zero waste to landfill at our owned print centers.</li>
+<li style="font-weight: 400"><span style="font-weight: 400">Source 100% of all globally purchased publication paper from material certified by independent, internationally recognized sustainable forestry certification bodies such as Forest Stewardship Council (FSC), Programme for the Endorsement of Forest Certification (PEFC), Sustainable Forest Initiative (SFI), Canadian Standards Association (CSA), or equivalent, by 2025.</span></li>
+</ul>
+<h3><b>Our Policy and Performance Summary</b></h3>
+<p><span style="font-weight: 400">The company strives to maintain a safe and healthy workplace and expects employees to observe all applicable health, safety, environmental and labor laws. We affirm to all our employees, customers and the public that we will conduct our activities in an environmentally-sustainable manner and meet or exceed all applicable regulations, company standards and voluntary initiatives.</span></p>
+<p><span style="font-weight: 400">To manage our environmental and safety risks, we pursue a path of continual improvement and integrate our management systems into our overall business strategy, using the frameworks from </span><a href="https://www.iso.org/iso-14001-environmental-management.html"><span style="font-weight: 400">ISO 14,001 (Environmental Management Systems)</span></a><span style="font-weight: 400"> and </span><a href="https://www.iso.org/iso-45001-occupational-health-and-safety.html"><span style="font-weight: 400">ISO 45,001 (Occupational Health &amp; Safety Management Systems)</span></a><span style="font-weight: 400">.</span></p>
+<p><span style="font-weight: 400">Dow Jones shares the details of its impact on climate change and forests in a transparent manner, publicly reporting both greenhouse gas (GHG) emissions and our sustainable paper management practices each year through the</span> <a href="https://www.cdp.net/en"><span style="font-weight: 400">CDP (Carbon Disclosure Project)</span></a><span style="font-weight: 400">, via News Corp.</span></p>
+<p><span style="font-weight: 400">To learn more about our sustainability programs and performance, please see our Dow Jones Sustainability Report – FY2021 linked below.</span></p>
+<div class="btns full-width">
+<p><a class="btn-simple" style="padding: 10px;font-size: inherit" href="https://images.dowjones.com/wp-content/uploads/sites/35/2022/01/25203828/DJ-SustainabilityReport-FY21.pdf" target="_blank" rel="noopener noreferrer">Dow Jones Sustainability Report</a></p>
+</div>
+<p>&nbsp;</p>
+					</div>
+				</div><!-- .centered END -->
+			</div>
+		
+	</div>
+</section>
+
+	<section class="dark" id="advertising">
+		<div class="wrapper lazy-loading">
+			<h2>Advertising</h2>
+			<div class="centered text-center">
+				<div class="free-content">
+					<p dir="ltr">Advertise in Dow Jones’ industry-leading publications to gain increased visibility and brand equity alongside premium content and the biggest brands in the world. Click below to learn more about placement in The Wall Street Journal, Barron’s, Financial News and MarketWatch.</p>
+				</div>
+			</div>
+
+										<div class="advertising-wrapper">
+											<div class="btns full-width">							<a data-tracking="Advertising_The_Wall_Street_Journal"  href="http://www.wsjmediakit.com/" class="btn-simple external" target="_blank">
+								The Wall Street Journal<span class="ico-arrow-right-big"></span>
+							</a>
+						<!-- .btns END -->
+																		<a data-tracking="Advertising_Barron's"  href="http://www.barronsmag.com" class="btn-simple external" target="_blank">
+								Barron's<span class="ico-arrow-right-big"></span>
+							</a>
+						</div><!-- .btns END -->
+											<div class="btns full-width">							<a data-tracking="Advertising_MarketWatch"  href="http://www.wsjdigital.com/products/marketwatch" class="btn-simple external" target="_blank">
+								MarketWatch<span class="ico-arrow-right-big"></span>
+							</a>
+						<!-- .btns END -->
+																		<a data-tracking="Advertising_Financial_News"  href="https://www.fnlondon.com/" class="btn-simple external" target="_blank">
+								Financial News<span class="ico-arrow-right-big"></span>
+							</a>
+						</div><!-- .btns END -->
+									</div><!-- .advertising-wrapper END -->
+					</div><!-- .wrapper END -->
+</section>
+
+		<section class="light" id="global-sales-and-subscriptions">
+		<div class="wrapper small lazy-loading">
+			<h2 id="global-sales-heading">Global Sales and Subscriptions</h2>
+
+			<div class="global-sales-screen" id="global-sales-screen-1">
+				<div class="centered text-center">
+					<div class="free-content">
+						<p>PricewaterhouseCoopers LLP UK provides independent assurance over the Dow Jones Global Sales and Subscription Report. To see them click the button below.</p>
+					</div>
+				</div>
+
+				<div class="btns mobile-margin">
+					<a href="javascript:;" class="btn-simple" data-open-sales-screen="2">Sales and subscription figures      <span class="ico-arrow-right-big"></span></a>
+				</div><!-- .btns END -->
+			</div><!-- .global-sales-screen END -->
+
+							<div class="global-sales-screen hidden" id="global-sales-screen-2">
+					<h3>Terms and Conditions</h3>
+					<div class="free-content">
+						<p dir="ltr">I accept and agree for and on behalf of myself and the entity I represent (each a &#8220;recipient&#8221;) that:</p>
+<ol>
+<li dir="ltr">
+<p dir="ltr" role="presentation">PricewaterhouseCoopers LLP (“PwC”) accept no liability (including liability for negligence) to each recipient in relation to the report. The report is provided to each recipient for information purposes only. If a recipient relies on the report, it does so entirely at its own risk.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr" role="presentation"> No recipient will bring a claim against PwC which relates to the provision of the report.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr" role="presentation">Neither PwC’s report, nor information obtained from it, may be made available to anyone else without PwC’s prior written consent, except where required by law or regulation.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr" role="presentation">PwC’s report was prepared with the client’s interests in mind. It was not prepared with any recipient&#8217;s interests in mind or for its use. PwC’s report is not a substitute for any enquiries that a recipient should make. Nonetheless you confirm and remain solely responsible for the sufficiency of the procedures for your purposes.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr" role="presentation">Any explanations that PwC provides in relation to the report are given on the same bases as those relating to the provision of the report itself.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr" role="presentation">Each recipient agrees to reimburse PwC for any liability (including legal costs) that PwC incur in connection with any claim by anyone else in relation to the provision of the report to the recipient.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr" role="presentation">This letter and any dispute arising from it, whether contractual or non-contractual, will be governed by English law and be subject to the exclusive jurisdiction of the English courts.</p>
+</li>
+</ol>
+					</div>
+					<div class="btns full-width">
+						<a href="javascript:;" class="btn-simple greyed-out" data-open-sales-screen="1">Decline      </span></a>
+						<a href="javascript:;" class="btn-simple accept" data-target-template="template_resource" data-target="downloads-wrapper" data-open-sales-screen="3" data-source="https://www.dowjones.com/api/resource/get/" data-resource-id="7702">Accept      <span class="ico-arrow-right-big"></span></a>
+					</div>
+				</div><!-- .global-sales-screen END -->
+			
+							<div class="global-sales-screen hidden" id="global-sales-screen-3">
+					<div class="centered text-center">
+						<div class="free-content">
+							<p>Click on the links below to see the complete Dow Jones Global Sales and Subscription figures. PricewaterhouseCoopers LLP UK provides independent assurance over the Dow Jones Global Sales and Subscription Report.</p>
+<p style="text-align: left;">
+						</div>
+					</div>
+						
+					<!-- <ul class="downloads generic-shadow resources"></ul> -->
+
+					<div class="downloads-wrapper" id="downloads-wrapper">
+						<!-- Async loaded conent -->
+					</div><!-- /.downloads-wrapper -->
+
+					
+
+				</div><!-- .global-sales-screen END -->
+			
+		</div><!-- .wrapper END -->
+	</section>
+
+<section class="light no-padding">
+    <div class="wrapper">
+        <header>
+            <div id="search-pop-up" class="search-pop-up">
+                <div class="wrapper">
+                    <a href="javascript:;" class="fancybox-close-custom visible"><span class="ico-close"></span></a>
+                </div>
+                <div class="wrapper">
+                    <h2>Search      </h2>
+                </div>
+                <div class="wrapper search-wrap">
+                    <form role="search" method="get" class="search-form" action="https://www.dowjones.com/">
+                        <input type="text" id="search-input" name="s" autocomplete="off" class="generic-shadow focus">
+                        <a href="https://www.dowjones.com/search/" title="Search"><span class="ico-search"></span></a>
+                    </form>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+                        <ul id="search-results" class="horizontal-list search"></ul><!-- .horizontal-list END -->
+                    </div><!-- .main END -->
+
+                    <aside class="sidebar" style="display: none">
+                        <div class="aside-pane generic-shadow m-top">
+                            <h3>Jobs      </h3>
+                            <ul class="search-aside" id="search-results-jobs"></ul>
+                        </div><!-- .aside-pane END -->
+                    </aside><!-- .sidebar END -->
+
+                    <div class="wrapper view-full-results" style="display: none;">
+                        <a href="https://www.dowjones.com/search/" class="search-full-results btn-simple">View full result set      <span class="ico-arrow-right-big"></span></a>
+                    </div>
+                </div>
+            </div><!-- .search-pop-up END -->
+        </header>
+    </div><!-- .wrapper END -->
+</section><!-- section END -->
+
+<script id="template-search-result-item" data-localized-pr="Press Room      " data-localized="Scoops      " data-localized-i="Insights      "type="text/template">
+        <div class="search-item-inner">
+            <div class="pane">
+                <div class="pane-info"><a href="{#url#}">{#title#}</a></div>
+            </div>
+        </div><!-- .pane END -->
+</script>
+
+<script id="template-search-result-item-product" data-localized="Products      " type="text/template">
+	<div class="search-item-inner">
+		<div class="pane">
+			<h3><a href="{#url#}">{#title#}</a></h3>
+			{#translated#}
+		</div>
+	</div>
+</script>
+
+<script id="template-search-result-item-page" data-localized="Pages      " type="text/template">
+    <div class="search-item-inner">
+        <div class="pane">
+            <ul class="breadcrumb mobile-hide">
+                <li><a href="https://www.dowjones.com">Dow Jones</a></li>
+                {#breadcrumb#}
+                <li class="visible"><span class="ico-arrow-right-big"></span><a href="{#url#}">{#title#}</a></li>
+            </ul>
+        </div><!-- .pane END -->
+    </div>
+</script>
+
+<script id="template-search-result-item-job-page" type="text/template">
+  <li>
+    <a href="{#url#}">
+      <div class="caption">
+        <h4>{#title#}</h4>
+      </div>
+    </a>
+  </li>
+</script>
+
+<script id="template-search-result-item-job" data-localized="Jobs      " type="text/template">
+    <li>
+        <a href="{#url#}" target="_blank">
+            <div class="caption">
+                <h4>{#title#}</h4>
+                <span class="location"><span>Location      : </span>{#location#}</span>
+            </div>
+        </a>
+    </li>
+</script>
+
+<script id="template-search-result-item-no-match" type="text/template">
+    <div class="search-item-inner">
+        <div class="pane">
+            <div class="pane-info no-result">No       {#section#} with       "{#term#}"</div>
+        </div><!-- .pane END -->
+    </div>
+</script>
+
+<footer class="page-footer">
+    <div class="footer-links">
+        <div class="wrapper">
+        <ul class="links-list">
+	        <li id="menu-item-13959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13959"><a href="https://www.dowjones.com/contact/">Contact</a></li>
+<li id="menu-item-8148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8148"><a href="https://www.dowjones.com/legal-notices/">Legal</a></li>
+<li id="menu-item-19988" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-19988"><a href="https://www.dowjones.com/about/#our-commitment-section" aria-current="page">Diversity Statement</a></li>
+<li id="menu-item-8156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8156"><a href="https://www.dowjones.com/equal-opportunity/">Equal Opportunity</a></li>
+<li id="menu-item-13995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13995"><a href="https://www.dowjones.com/modern-slavery-statement/">Modern Slavery Statement</a></li>
+<li id="menu-item-19561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19561"><a href="https://www.dowjones.com/accessibility-statement/"><font style="color:#01feff;">Accessibility Statement</font></a></li>
+<li id="menu-item-8166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8166"><a href="https://www.dowjones.com/code-conduct/">Code of Conduct</a></li>
+<li id="menu-item-18913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18913"><a href="https://www.dowjones.com/privacy-notice/?mod=DJnotice"><font style="color:#01feff;">Privacy Notice </font></a></li>
+<li id="menu-item-18914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18914"><a href="https://www.dowjones.com/cookie-notice/?mod=DJnotice"><font style="color:#01feff;">Cookie Notice </font></a></li>
+<li id="menu-item-19523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19523"><a href="https://www.dowjones.com/security/?mod=DJnotice"><font style="color:#01feff;">Security</font></a></li>
+<li id="menu-item-19042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19042"><a href="https://www.dowjones.com/pibcontentprivacynotice/?mod=DJnotice"><font style="color: #01feff;">PIB Content Privacy Notice</font></a></li>
+<li id="menu-item-20026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20026"><a href="https://images.dowjones.com/wp-content/uploads/sites/35/2023/07/03185626/Supplier-Code-of-Conduct.pdf">Supplier Code of Conduct</a></li>
+            <li><a id="gdpr-link"></a></li>
+            <li><a id="usp-link"></a></li>
+            <li><a id="usp-link-1"></a></li>
+	        <li><a href="javascript:;" class="sitemap-toggle">Sitemap       <span class="ico-arrow-down"></span></a></li>
+        </ul>
+            <div class="sitemap"><ul id="menu-sitemap" class="menu"><li id="menu-item-9034" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9034"><a href="/product-category/all/">Business Offerings</a>
+<ul class="sub-menu">
+	<li id="menu-item-9036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9036"><a href="https://developer.dowjones.com/site/global/home/index.gsp">Dow Jones Developer Platform</a></li>
+	<li id="menu-item-9037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9037"><a href="https://www.dowjones.com/professional/newswires/">News and Information</a></li>
+	<li id="menu-item-9038" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9038"><a href="https://www.dowjones.com/professional/factiva/">Knowledge and Insight</a></li>
+	<li id="menu-item-9039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9039"><a href="https://www.dowjones.com/professional/risk/">Risk and Compliance</a></li>
+</ul>
+</li>
+<li id="menu-item-13930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13930"><a href="https://www.dowjones.com/insights/">Insights</a>
+<ul class="sub-menu">
+	<li id="menu-item-13931" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13931"><a href="https://www.dowjones.com/professional/resources">Insights Archive</a></li>
+</ul>
+</li>
+<li id="menu-item-9042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9042"><a href="https://www.dowjones.com/scoops/">Scoops</a>
+<ul class="sub-menu">
+	<li id="menu-item-10975" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10975"><a href="https://www.dowjones.com/professional/resources">Scoops Archive</a></li>
+</ul>
+</li>
+<li id="menu-item-8989" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7695 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-8989"><a href="https://www.dowjones.com/about/" aria-current="page">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-9065" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-9065"><a href="/about/#what-we-do" aria-current="page">What We Do</a></li>
+	<li id="menu-item-9071" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-9071"><a href="/about/#team-leadership" aria-current="page">Our Leadership Team</a></li>
+	<li id="menu-item-9072" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-9072"><a href="/about/#corporate-citizenship" aria-current="page">Corporate Citizenship</a></li>
+	<li id="menu-item-9073" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-9073"><a href="/about/#environmental-policy" aria-current="page">Our Environmental Policy</a></li>
+</ul>
+</li>
+<li id="menu-item-9101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9101"><a href="https://www.dowjones.com/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-10976" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10976"><a href="https://www.dowjones.com/contact/">Get In Touch</a></li>
+</ul>
+</li>
+<li id="menu-item-13928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13928"><a href="https://www.dowjones.com/press-room/">Press Room</a>
+<ul class="sub-menu">
+	<li id="menu-item-13929" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13929"><a href="https://www.dowjones.com/press-room/">Press Releases</a></li>
+</ul>
+</li>
+<li id="menu-item-9043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9043"><a href="https://www.dowjones.com/careers/">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-9074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9074"><a href="/careers/#benefits">Benefits</a></li>
+	<li id="menu-item-9075" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9075"><a href="/careers/#career-growth">Career Growth</a></li>
+	<li id="menu-item-19990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19990"><a href="https://www.dowjones.com/careers/#our-commitment-section">Our Commitment</a></li>
+	<li id="menu-item-9081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9081"><a href="/careers/#team-employee">Our Employees</a></li>
+</ul>
+</li>
+</ul></div>        </div><!-- .wrapper END -->
+    </div><!-- .links END -->
+
+    <div class="copyright">
+        <div class="wrapper">
+            <div class="copyright-content">
+                <em>&copy; Dow Jones       2024</em>
+	                                <a href="https://www.facebook.com/dowjones" title="Visit us on Facebook" target="_blank"><span class="ico-facebook"></span></a>
+	            	                                <a href="https://www.twitter.com/dowjones" title="Visit us on Twitter" target="_blank"><span class="ico-twitter"></span></a>
+	                        </div>
+            <div class="footer-logo"><a href="https://newscorp.com/"><img src="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/img/newscorp-logo.png" alt="Newscorp"></a></div>
+        </div><!-- .wrapper END -->
+    </div><!-- .copyright END -->
+</footer><!-- .page-footer END -->
+
+<div id="eloqua-form-overlay">
+</div>
+
+<div id="salesforce-form-overlay">
+</div>
+
+<div id="signup-form-overlay" class="forms-overlay signup-form">
+    <div class="subscribe-form">
+        <header>
+                        <a class="js-fancybox-close-custom fancybox-close-custom visible" href="javascript:;"><span class="ico-close"></span></a>
+        </header>
+        <div role="form" dir="ltr" lang="en-US">
+            <form action="https://www.dowjones.com/wp-admin/admin-ajax.php" method="post" class="form-subscribe" novalidate="novalidate">
+                <p>
+                    <label for="email" class="required text">Email      <sup><span class="required">*</span></sup></label>
+                    <span class="email subscribe-field-wrapper">
+                        <input name="email" value="" size="40" class="text" id="email" type="email">
+                        <span role="alert">Please fill in the required field.      </span>
+                    </span>
+                    <span class="agreement">By clicking submit, I agree to the       <a href="https://www.dowjones.com/privacy-notice/" target="_blank">Privacy Policy      </a> and       <a href="https://www.dowjones.com/cookie-notice/" target="_blank">Cookie Policy      </a> and I understand I will receive marketing communications from Dow Jones professional information products from which I may unsubscribe using the links provided.      </span>
+                    <input value="Submit      " class="submit" type="submit">
+                    <input name="action" value="subscribes_to_dj" type="hidden">
+                </p>
+            </form>
+        </div>
+    </div>
+    <div class="thank-you-wrap invisible">
+        <header>
+            <h2>Thank you      </h2>
+            <a class="js-fancybox-close-custom fancybox-close-custom visible" href="javascript:;"><span class="ico-close"></span></a>
+        </header>
+        <div class="thank-you-msg">Thank you for subscribing, your information has been submitted successfully.      </div>
+        <div class="btns">
+            <a class="btn-simple js-fancybox-close-custom" href="javascript:;">Close      </a>
+        </div>
+    </div>
+</div>
+
+</div><!-- .page END -->
+<!--[if lte IE 9]>
+    <script type="text/javascript" src="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/matchMedia.js"></script>
+    <script type="text/javascript" src="https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/matchMedia.addListener.js"></script>
+<![endif]-->
+    <link rel='stylesheet' id='mediaelement-css'  href='https://www.dowjones.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://www.dowjones.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.9.3' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/jquery-1.11.3.min.js?ver=1.11.3' id='jquery-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/render_posts.min.js?ver=5.9.3' id='render-posts-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/get_cache.php?section=product' id='cache-product-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/get_cache.php?section=scoop' id='cache-scoop-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/get_cache.php?section=insight' id='cache-insight-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/get_cache.php?section=press-room' id='cache-press-room-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/get_cache.php?section=page' id='cache-page-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/get_cache.php?section=job' id='cache-job-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/search.min.js?ver=5.9.3' id='search-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/jquery.ath.load-more.js?ver=5.9.3' id='load-more-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/jquery.ath.infinite-scroll.js?ver=5.9.3' id='infinite-scroll-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/template-engine.min.js?ver=5.9.3' id='template-engine-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/xhr.min.js?ver=5.9.3' id='xhr-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/jquery-ui.min.js?ver=5.9.3' id='jquery-ui-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/velocity.min.js?ver=5.9.3' id='velocity-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/jquery.flexslider-min.js?ver=5.9.3' id='flex-slider-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/enquire.min.js?ver=5.9.3' id='enquire-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/jquery.selectBoxIt.min.js?ver=5.9.3' id='selectboxIt-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/jquery.inview.min.js?ver=5.9.3' id='inview-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/jquery.fancybox.pack.js?ver=5.9.3' id='fancybox-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/iscroll-mod.min.js?ver=5.9.3' id='iScroll-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/select2.min.js?ver=5.9.3' id='select2-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/truncate.min.js?ver=5.9.3' id='new-clamp-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/subscribe.js?ver=5.9.3' id='subscribe_ajax-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/modernizr.custom.44806.min.js?ver=5.9.3' id='modernizr-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/vendor/fastclick.min.js?ver=5.9.3' id='fastclick-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/forms.min.js?ver=5.9.3' id='forms-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-content/themes/dow-jones/assets/dist/js/init.min.js?ver=5.9.3' id='init-js'></script>
+<script type='text/javascript' id='mediaelement-core-js-before'>
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16' id='mediaelement-core-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=5.9.3' id='mediaelement-migrate-js'></script>
+<script type='text/javascript' id='mediaelement-js-extra'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=5.9.3' id='wp-mediaelement-js'></script>
+<script type='text/javascript' src='https://www.dowjones.com/wp-includes/js/mediaelement/renderers/vimeo.min.js?ver=4.2.16' id='mediaelement-vimeo-js'></script>
+
+</body>
+</html>
